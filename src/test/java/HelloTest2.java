@@ -10,6 +10,7 @@ public class HelloTest2 {
     // This method will run once before all the tests in our class
     @BeforeClass
     public static void setUpClass(){
+//         capture web browser automatically
         WebDriverManager.chromedriver().setup();
     }
 
@@ -19,5 +20,7 @@ public class HelloTest2 {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.saucedemo.com/");
+        driver.close();
+        driver.quit();
     }
 }
